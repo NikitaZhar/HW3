@@ -14,13 +14,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     @IBAction func loginButton(_ sender: UIButton) {
     }
     
     @IBAction func unwindSeguetoLoginScreen(segue: UIStoryboardSegue) {
-        
+        userNameTextField.text = ""
+        passwordTextField.text = ""
     }
     
     @IBAction func forgotInfoAlertButton(_ sender: UIButton) {
@@ -36,9 +38,8 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destinationVC = segue.destination as? UserInfoViewController else { return }
-        destinationVC.userNameInfo = userNameTextField.text
-//            sender as? String
+        guard let userInfoVC = segue.destination as? UserInfoViewController else { return }
+        userInfoVC.userNameInfo = userNameTextField.text
     }
 }
 
