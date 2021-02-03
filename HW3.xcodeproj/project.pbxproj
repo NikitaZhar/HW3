@@ -13,6 +13,7 @@
 		534EC23625C9D73700E5D670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534EC23425C9D73700E5D670 /* Main.storyboard */; };
 		534EC23825C9D73C00E5D670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 534EC23725C9D73C00E5D670 /* Assets.xcassets */; };
 		534EC23B25C9D73C00E5D670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 534EC23925C9D73C00E5D670 /* LaunchScreen.storyboard */; };
+		534EC24625CAB0A400E5D670 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534EC24525CAB0A400E5D670 /* UserInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		534EC23725C9D73C00E5D670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		534EC23A25C9D73C00E5D670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		534EC23C25C9D73C00E5D670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		534EC24525CAB0A400E5D670 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				534EC23025C9D73700E5D670 /* SceneDelegate.swift */,
 				534EC23225C9D73700E5D670 /* ViewController.swift */,
 				534EC23425C9D73700E5D670 /* Main.storyboard */,
+				534EC24525CAB0A400E5D670 /* UserInfoViewController.swift */,
 				534EC23725C9D73C00E5D670 /* Assets.xcassets */,
 				534EC23925C9D73C00E5D670 /* LaunchScreen.storyboard */,
 				534EC23C25C9D73C00E5D670 /* Info.plist */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				534EC23325C9D73700E5D670 /* ViewController.swift in Sources */,
+				534EC24625CAB0A400E5D670 /* UserInfoViewController.swift in Sources */,
 				534EC22F25C9D73700E5D670 /* AppDelegate.swift in Sources */,
 				534EC23125C9D73700E5D670 /* SceneDelegate.swift in Sources */,
 			);
