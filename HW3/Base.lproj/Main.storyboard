@@ -25,7 +25,6 @@
                                         <state key="normal" title="Log In"/>
                                         <connections>
                                             <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XSk-tv-iSk"/>
-                                            <segue destination="VYe-n9-Zec" kind="show" id="zS4-eU-uIF"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Kaa-1A-cBR">
@@ -57,12 +56,18 @@
                                         <color key="textColor" systemColor="systemIndigoColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="D99-hR-ZYf"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="P7f-9X-ZfT">
                                         <rect key="frame" x="0.0" y="56" width="294" height="35"/>
                                         <color key="textColor" systemColor="systemIndigoColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="xtp-Se-cKY"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -79,8 +84,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginButtonLabel" destination="My5-TI-1XB" id="pYN-NF-9eX"/>
                         <outlet property="passwordTextField" destination="P7f-9X-ZfT" id="3cb-vB-73b"/>
                         <outlet property="userNameTextField" destination="Whj-EH-thi" id="yej-7E-lK6"/>
+                        <segue destination="VYe-n9-Zec" kind="show" identifier="userInfoSegue" id="LTC-iI-hda"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -98,8 +105,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="mFt-1Z-10I">
                                 <rect key="frame" x="103.5" y="226" width="207" height="444"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpT-Zi-57E">
-                                        <rect key="frame" x="21.5" y="0.0" width="164" height="108"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QpT-Zi-57E">
+                                        <rect key="frame" x="63" y="0.0" width="81.5" height="108"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -119,7 +126,6 @@
                                             <color key="titleColor" systemColor="systemIndigoColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="logOutButton" destination="VYe-n9-Zec" eventType="touchUpInside" id="nca-Me-zKO"/>
                                             <segue destination="alG-9K-GKH" kind="unwind" unwindAction="unwindSeguetoLoginScreenWithSegue:" id="3Oi-bm-jF1"/>
                                         </connections>
                                     </button>

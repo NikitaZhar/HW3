@@ -7,22 +7,35 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet var loginButtonLabel: UIButton!
         
-    }
-    
     @IBAction func loginButton(_ sender: UIButton) {
+        guard let userName = userNameTextField.text,
+              !userName.isEmpty else { return }
+        
+        loginButtonLabel.setTitle("Next", for: .normal)
+        userNameTextField.returnKeyType = .done
+        
+        guard let password = passwordTextField.text,
+              !password.isEmpty else { return }
+        
+        if userName == "User", password == "Password" {
+            performSegue(withIdentifier: "userInfoSegue", sender: nil)
+        } else {
+            forgotInfoMessage(with: "Invalid Login and Password",
+                              and: "Please enter correct login and password")
+        }
     }
     
     @IBAction func unwindSeguetoLoginScreen(segue: UIStoryboardSegue) {
         userNameTextField.text = ""
         passwordTextField.text = ""
+        loginButtonLabel.setTitle("Log In", for: .normal)
+        userNameTextField.returnKeyType = UIReturnKeyType.default
     }
     
     @IBAction func forgotInfoAlertButton(_ sender: UIButton) {
@@ -33,8 +46,14 @@ class ViewController: UIViewController {
         }
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        loginButtonLabel.setTitle("Next", for: .normal)
+        textField.returnKeyType = .done
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        loginButton(loginButtonLabel)
+        return true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -53,13 +72,11 @@ extension ViewController {
         )
         
         let okAlertButton = UIAlertAction(title: "OK", style: .default)
-//        {
-//            _ in self.textField.text = ""
-//        }
+        {
+            _ in self.passwordTextField.text = ""
+        }
         alertView.addAction(okAlertButton)
         present(alertView, animated: true)
-
     }
     
 }
-
