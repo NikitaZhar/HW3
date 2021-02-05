@@ -11,11 +11,11 @@ class UserInfoViewController: UIViewController {
 
     @IBOutlet var userLabel: UILabel!
     
-    var userNameInfo: String!
+    var userNameInfo = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        userLabel.text = "Hello " + userNameInfo
+        userLabel.text = "Hello \(userNameInfo)"
     }
 }

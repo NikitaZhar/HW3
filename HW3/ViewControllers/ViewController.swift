@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let userInfoVC = segue.destination as? UserInfoViewController else { return }
-        userInfoVC.userNameInfo = userNameTextField.text
+        userInfoVC.userNameInfo = authorizedUser
     }
     
      @IBAction func unwindSeguetoLoginScreen(segue: UIStoryboardSegue) {
