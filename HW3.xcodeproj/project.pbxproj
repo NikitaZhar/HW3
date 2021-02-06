@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		532DAC6E25CE92CE00883B76 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532DAC6D25CE92CE00883B76 /* Account.swift */; };
 		534EC22F25C9D73700E5D670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534EC22E25C9D73700E5D670 /* AppDelegate.swift */; };
 		534EC23125C9D73700E5D670 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534EC23025C9D73700E5D670 /* SceneDelegate.swift */; };
 		534EC23325C9D73700E5D670 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534EC23225C9D73700E5D670 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		532DAC6D25CE92CE00883B76 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		534EC22B25C9D73700E5D670 /* HW3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		534EC22E25C9D73700E5D670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		534EC23025C9D73700E5D670 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		53CF713825CD9582007DEC02 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				532DAC6D25CE92CE00883B76 /* Account.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				53CF714025CDADE1007DEC02 /* HobbyViewController.swift in Sources */,
 				53CF713D25CDAD8D007DEC02 /* CompanyInfoViewController.swift in Sources */,
 				534EC23125C9D73700E5D670 /* SceneDelegate.swift in Sources */,
+				532DAC6E25CE92CE00883B76 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

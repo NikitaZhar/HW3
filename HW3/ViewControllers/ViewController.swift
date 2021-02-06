@@ -34,6 +34,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
  
     @IBAction func loginButtonPressed() {
+        var account: Account
+        
         if userNameTextField.text != authorizedUser ||
            passwordTextField.text != authorizedPassword {
             forgotAlert(
